@@ -1,0 +1,30 @@
+name: Build Expo App on PR
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🛠️ Install Expo CLI
+        run: npm install -g expo-cli
+
+      - name: 🧪 Validate Expo project
+        run: expo doctor
+
+      - name: 🔧 Build Expo app (dev preview)
+        run: expo export --dev --output-dir dist
