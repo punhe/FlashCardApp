@@ -3,8 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 import { FlashcardSet, Flashcard } from '../models/types';
 
 // Replace with your Supabase URL and anon key
-const supabaseUrl = 'https://rkrbpueljljnsjngkdvf.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJrcmJwdWVsamxqbnNqbmdrZHZmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEzNjU2NDMsImV4cCI6MjA1Njk0MTY0M30.5vio6myJ-DlNohiuTQ3lCBjar46EOMKHyogMmYD4Y2U';
+const supabaseUrl = '';
+const supabaseKey = '';
 
 // Mock data for offline/error scenarios
 const MOCK_SETS: FlashcardSet[] = [
